@@ -20,7 +20,7 @@ header {
 }
 
 .heyThere {
-  width: clamp(400px, 68vw, 1600px);
+  width: max(400px, 74vw);
   margin-bottom: 8vh;
   display: none;
 }
@@ -77,15 +77,30 @@ h1 {
   height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .wavySectionContainer {
-  background-color: var(--primary);
   height: 100%;
   width: 100%;
+  background-color: var(--primary);
+}
+
+.wavyDividerTop {
+  margin-block: -3px;
 }
 
 .wavyDividerBottom {
   transform: rotate(180deg);
+  margin-top: -3px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
