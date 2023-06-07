@@ -11,17 +11,24 @@ body {
 }
 
 header {
-  margin-left: 12vw;
-  padding-right: 6vw;
-  padding-top: 6vh;
+  padding-inline: 10vw;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  height: 100vh;
 }
 
 .heyThere {
-  width: clamp(400px, 68vw, 2000px);
-  margin-bottom: 10vh;
-  margin-left: -4vh;
+  width: clamp(400px, 68vw, 1600px);
+  margin-bottom: 8vh;
+  margin-top: -6vh;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .heyThere {
+    display: block;
+  }
 }
 
 h2 {
@@ -29,22 +36,30 @@ h2 {
   font-size: 1.5rem;
   color: var(--light);
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
-  font-size: 4.7rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: var(--light);
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 26px;
   line-height: 0.9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 .contactIcons {
   display: flex;
   flex-direction: row;
-  gap: 1.3rem;
+  gap: 1.2rem;
 }
 
 .icon {
