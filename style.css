@@ -2,7 +2,7 @@
   --dark: #1d1f21;
   --light: #fff;
   --primary: #0099ff;
-  --secondary: #ce2d4f;
+  --secondary: #df1440;
 }
 
 body {
@@ -89,6 +89,12 @@ h1 {
   flex-direction: column;
 }
 
+@media (orientation: portrait) {
+  .wavySection {
+    height: 600px;
+  }
+}
+
 .wavyDividerTop {
   margin-bottom: -1px;
 }
@@ -150,18 +156,28 @@ h1 {
 .latestProjectHeaderText {
   color: var(--light);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+@media (orientation: portrait) {
+  .latestProjectHeaderText {
+    margin-top: 50px;
+  }
 }
 
 .latestProject {
   padding-inline: 10%;
-  padding-block: 5%;
+  height: clamp(700px, 92vh, 1050px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.latestProjectTitle {
-  color: var(--light);
-  font-weight: 600;
-  font-size: 1.82rem;
+@media (orientation: portrait) {
+  .latestProject {
+    height: 900px;
+  }
 }
 
 .latestProjectDescription {
@@ -171,13 +187,28 @@ h1 {
   font-size: 1rem;
   line-height: 1.4;
   margin-top: -0.4vh;
+  max-width: 55ch;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
+  .latestProjectHeaderText {
+    font-size: 3rem;
+  }
   .latestProjectDescription {
     font-size: 1.6rem;
-    width: 55ch;
   }
+}
+
+.latestProjectButton {
+  padding: 0.9em 2em;
+  background-color: var(--secondary);
+  color: var(--light);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark);
+  align-self: flex-start;
 }
 
 /* Scrollbar */
