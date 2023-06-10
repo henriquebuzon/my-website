@@ -1,13 +1,16 @@
-const timeline = gsap.timeline({
-  defaults: { duration: 0.5, ease: "power1", autoAlpha: 0 },
-});
+gsap.registerPlugin(ScrollTrigger);
 
 const iconAnimation = {
   scale: 0,
   delay: "-0.3",
 };
 
-timeline
+gsap.set(".sun", { xPercent: -50 });
+
+gsap
+  .timeline({
+    defaults: { duration: 0.5, ease: "power1", autoAlpha: 0 },
+  })
   .from("h2", {
     x: "-10%",
     opacity: 0,
@@ -20,4 +23,13 @@ timeline
   .from(".icon:nth-child(1)", iconAnimation)
   .from(".icon:nth-child(2)", iconAnimation)
   .from(".icon:nth-child(3)", iconAnimation)
-  .from(["main", "footer"], { y: "10%", autoAlpha: 0 });
+  .from(["main", "footer"], { y: "10%", autoAlpha: 0 })
+  .to(".sun", {
+    scrollTrigger: {
+      trigger: ".wavySectionContainer",
+      scrub: true,
+    },
+    rotation: 360,
+    duration: 2,
+    ease: "none",
+  });
