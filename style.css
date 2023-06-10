@@ -60,6 +60,11 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+h1,
+h2 {
+  visibility: hidden;
+}
+
 @media (min-width: 500px) {
   h1 {
     font-size: 3rem;
