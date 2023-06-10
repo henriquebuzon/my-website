@@ -33,3 +33,18 @@ gsap
     duration: 2,
     ease: "none",
   });
+
+const elementsScaledOnHover = [
+  ...Array.from(document.querySelectorAll(".icon")),
+  document.querySelector(".latestProjectButton"),
+];
+
+elementsScaledOnHover.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    gsap.to(element, { scale: 1.3, duration: 0.3 });
+  });
+
+  element.addEventListener("mouseout", () => {
+    gsap.to(element, { scale: 1, duration: 0.3 });
+  });
+});
