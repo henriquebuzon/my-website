@@ -31,6 +31,18 @@ const elementsScaledOnHover = [
   document.querySelector('.latestProjectButton'),
 ]
 
+setTimeout(() => {
+  gsap.to('.sun', {
+    scrollTrigger: {
+      trigger: '.wavySectionContainer',
+      scrub: true,
+    },
+    rotation: 180,
+    duration: 2,
+    ease: 'linear',
+  })
+}, 3500)
+
 elementsScaledOnHover.forEach((element) => {
   element.addEventListener('mouseover', () => {
     gsap.to(element, { scale: 1.2, duration: 0.3 })
