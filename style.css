@@ -108,7 +108,7 @@ footer,
 }
 
 .wavySectionContainer {
-  height: 900px;
+  height: 800px;
   width: vw;
   background-color: var(--primary);
   position: relative;
