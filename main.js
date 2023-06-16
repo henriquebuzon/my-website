@@ -9,26 +9,24 @@ gsap
   .from('h2', {
     x: '-10%',
     opacity: 0,
-    delay: 1.5,
+    delay: 1.7,
   })
   .from('h1', {
     x: '10%',
     opacity: 0,
-    delay: 0.05,
   })
   .from(headerIcons[0], {
     scale: 0,
-    delay: 0.05,
   })
   .from(headerIcons[1], {
     scale: 0,
-    delay: -0.3,
+    delay: -0.4,
   })
   .from(headerIcons[2], {
     scale: 0,
-    delay: -0.3,
+    delay: -0.4,
   })
-  .from(['main', 'footer'], { y: '5%', autoAlpha: 0, delay: -0.1 })
+  .from(['main', 'footer'], { y: '5%', autoAlpha: 0, delay: -0.2 })
 
 setTimeout(() => {
   gsap.to('.sun', {
