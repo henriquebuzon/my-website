@@ -1,10 +1,5 @@
 gsap.registerPlugin(ScrollTrigger)
 
-const iconAnimation = {
-  scale: 0,
-  delay: -0.3,
-}
-
 const headerIcons = document.getElementsByClassName('headerIcon')
 
 gsap
@@ -14,16 +9,26 @@ gsap
   .from('h2', {
     x: '-10%',
     opacity: 0,
-    delay: 1.5,
+    delay: 1.9,
   })
   .from('h1', {
     x: '10%',
     opacity: 0,
+    delay: 0.1,
   })
-  .from(headerIcons[0], iconAnimation)
-  .from(headerIcons[1], iconAnimation)
-  .from(headerIcons[2], iconAnimation)
-  .from(['main', 'footer'], { y: '10%', autoAlpha: 0, delay: -0.3 })
+  .from(headerIcons[0], {
+    scale: 0,
+    delay: 0.1,
+  })
+  .from(headerIcons[1], {
+    scale: 0,
+    delay: -0.3,
+  })
+  .from(headerIcons[2], {
+    scale: 0,
+    delay: -0.3,
+  })
+  .from(['main', 'footer'], { y: '10%', autoAlpha: 0 })
 
 const elementsScaledOnHover = [
   ...document.getElementsByClassName('headerIcon'),
