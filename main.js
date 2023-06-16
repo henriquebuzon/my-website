@@ -9,16 +9,16 @@ gsap
   .from('h2', {
     x: '-10%',
     opacity: 0,
-    delay: 1.9,
+    delay: 1.5,
   })
   .from('h1', {
     x: '10%',
     opacity: 0,
-    delay: 0.1,
+    delay: 0.05,
   })
   .from(headerIcons[0], {
     scale: 0,
-    delay: 0.1,
+    delay: 0.05,
   })
   .from(headerIcons[1], {
     scale: 0,
@@ -28,13 +28,7 @@ gsap
     scale: 0,
     delay: -0.3,
   })
-  .from(['main', 'footer'], { y: '10%', autoAlpha: 0 })
-
-const elementsScaledOnHover = [
-  ...document.getElementsByClassName('headerIcon'),
-  ...document.getElementsByClassName('footerIcon'),
-  document.querySelector('.latestProjectButton'),
-]
+  .from(['main', 'footer'], { y: '5%', autoAlpha: 0, delay: -0.1 })
 
 setTimeout(() => {
   gsap.to('.sun', {
@@ -47,6 +41,12 @@ setTimeout(() => {
     ease: 'linear',
   })
 }, 3500)
+
+const elementsScaledOnHover = [
+  ...document.getElementsByClassName('headerIcon'),
+  ...document.getElementsByClassName('footerIcon'),
+  document.querySelector('.latestProjectButton'),
+]
 
 elementsScaledOnHover.forEach((element) => {
   element.addEventListener('mouseover', () => {

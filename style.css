@@ -211,7 +211,6 @@ footer,
 .latestProjectButton {
   padding: 0.7em 2em;
   background-color: var(--secondary);
-  color: var(--light);
   border: none;
   font-size: 1.3rem;
   font-weight: 800;
