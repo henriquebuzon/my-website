@@ -29,8 +29,8 @@ header {
 }
 
 .heyThere {
-  width: max(400px, 80%);
-  margin-bottom: 8vh;
+  width: max(400px, 60%);
+  margin-bottom: 5vh;
   display: none;
 }
 
@@ -42,7 +42,7 @@ header {
 
 h2 {
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--light);
   margin: 0;
   margin-bottom: 12px;
