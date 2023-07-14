@@ -9,7 +9,7 @@ gsap
   .from('h2', {
     x: '-10%',
     opacity: 0,
-    delay: 1.7,
+    delay: 2.2,
   })
   .from('h1', {
     x: '10%',
